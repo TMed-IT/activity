@@ -3,6 +3,7 @@
   "name": "tsukuba-yokohama-dev",
   "main": "src/index.ts",
   "compatibility_date": "2025-06-22",
+  "account_id": "<ACCOUNT_ID>",
   "assets": {
     "directory": "./dist",
     "binding": "ASSETS",
