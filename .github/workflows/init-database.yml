@@ -1,0 +1,26 @@
+name: Initialize Cloudflare D1
+
+on:
+  workflow_dispatch:
+    inputs:
+      confirm:
+        description: "本番D1にcreate.sqlを適用する"
+        required: true
+        type: boolean
+        default: false
+
+jobs:
+  initialize-database:
+    if: ${{ inputs.confirm }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Initialize D1
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CF_API_TOKEN }}
+          accountId: ${{ secrets.CF_ACCOUNT_ID }}
+          workingDirectory: "hono"
+          command: d1 execute activity --remote --file=./create.sql
