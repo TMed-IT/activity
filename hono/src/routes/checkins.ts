@@ -22,7 +22,7 @@ app.post("/", authMiddleware(true, "authorization"), async (c) => {
 
   const ip = getIP(c);
   const isInternal = isInternalIP(ip);
-  const locationId = isInternal ? "utsukuba" : "others";
+  const locationId = isInternal ? "uomori" : "others";
   const checkinResult = await fetchCheckins(
     userId,
     { year, month, day, hours },

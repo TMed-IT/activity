@@ -17,7 +17,7 @@ CREATE TABLE user(
 );
 
 CREATE TABLE location(
-  id TEXT PRIMARY KEY, -- e.g. utsukuba
+  id TEXT PRIMARY KEY, -- e.g. uomori
   created_at TIMESTAMP NOT NULL DEFAULT (DATETIME('now', 'localtime')),
   updated_at TIMESTAMP NOT NULL DEFAULT (DATETIME('now', 'localtime'))
 );
@@ -54,5 +54,5 @@ BEGIN
   UPDATE location SET updated_at = DATETIME('now', 'localtime') WHERE rowid == NEW.rowid;
 END;
 
-INSERT INTO location (id) VALUES ("utsukuba");
+INSERT INTO location (id) VALUES ("uomori");
 INSERT INTO location (id) VALUES ("others");

@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
     <key>Label</key>
-    <string>dev.yokohama.tsukuba</string>
+    <string>org.tmedit.activity</string>
 
     <key>StartInterval</key>
     <integer>120</integer>
@@ -15,7 +15,7 @@
         <string>POST</string>
         <string>-H</string>
         <string>Authorization: $YOUR_TOKEN</string>
-        <string>https://tsukuba.yokohama.dev/api/checkins</string>
+        <string>https://activity.tmedit.org/api/checkins</string>
     </array>
 
     <key>RunAtLoad</key>

@@ -1,8 +1,8 @@
-# tsukuba.yokohama.dev
+# activity.tmedit.org
 
-筑波大学にいるかいないかを記録・公開する Web サイト
+大学にいるかいないかを記録・公開する Web サイト
 
-<https://tsukuba.yokohama.dev>
+<https://activity.tmedit.org>
 
 ## 仕様・使い方
 
@@ -30,7 +30,7 @@
 
 - 以下の POST リクエストを送信してください
   ```bash
-  curl -X POST https://tsukuba.yokohama.dev/api/checkins \
+  curl -X POST https://activity.tmedit.org/api/checkins \
     -H "Authorization: <YOUR_TOKEN>"
   ```
   - レートリミット（100 回/時間）を設けています
@@ -40,20 +40,20 @@
 
 launchd を用いて上記コマンドを定期実行できます
 
-1. `dev.yokohama.tsukuba.plist` をダウンロードします
+1. `org.tmedit.activity.plist` をダウンロードします
 2. `$YOUR_TOKEN` を書き換えた上で `~/Library/LaunchAgents` に保存します
-3. `launchctl load ~/Library/LaunchAgents/dev.yokohama.tsukuba.plist` を実行します
+3. `launchctl load ~/Library/LaunchAgents/org.tmedit.activity.plist` を実行します
 
 Claude Code 等のコーディングエージェントに、以下のプロンプトを与えても設定できます。
 
 ```
-README を読んで、PC 上に dev.yokohama.tsukuba.plist をセットして。トークンは以下の通り。
+README を読んで、PC 上に org.tmedit.activity.plist をセットして。トークンは以下の通り。
 <YOUR_TOKEN>
 ```
 
 ### 記録の確認
 
-<https://tsukuba.yokohama.dev/@screenname> から確認できます
+<https://activity.tmedit.org/@screenname> から確認できます
 
 ## 開発
 

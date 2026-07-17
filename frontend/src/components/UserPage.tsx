@@ -80,7 +80,7 @@ const UserPage = () => {
     if (lastCheckin) {
       if (lastCheckin.active) {
         message = `${user.name}は${
-          isInternal(lastCheckin.location) ? "筑波大学" : "学外"
+          isInternal(lastCheckin.location) ? "大森" : "学外"
         }にいます`;
       } else {
         message = `${user.name}がどこにいるかは不明です`;
@@ -88,7 +88,7 @@ const UserPage = () => {
     } else {
       message = `${user.name}の記録はありません`;
     }
-    const messageWithUrl = `${message}\nhttps://tsukuba.yokohama.dev/@${user.screenName}`;
+    const messageWithUrl = `${message}\nhttps://activity.tmedit.org/@${user.screenName}`;
     const url = `https://twitter.com/intent/tweet?text=${encodeURIComponent(
       messageWithUrl
     )}`;
@@ -128,7 +128,7 @@ const UserPage = () => {
                   }
                 />
                 現在：
-                {isInternal(lastCheckin.location) ? "筑波大学" : "学外"}
+                {isInternal(lastCheckin.location) ? "大森" : "学外"}
                 <br />
                 <LastUpdate>最終更新：{lastCheckin.date}</LastUpdate>
                 <TweetAnchor onClick={tweet}>（ツイート）</TweetAnchor>
@@ -141,7 +141,7 @@ const UserPage = () => {
                 <LastUpdate>
                   最終更新：
                   {isInternal(lastCheckin.location)
-                    ? "筑波大学"
+                    ? "大森"
                     : "学外"} ／ {lastCheckin.date}
                   <TweetAnchor onClick={tweet}>（ツイート）</TweetAnchor>
                 </LastUpdate>
