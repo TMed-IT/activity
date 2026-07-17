@@ -24,7 +24,7 @@ const getIdToken = (userId: string, token: string) => {
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 const honoDir = join(__dirname, "..");
-const DB_NAME = "tsukuba-yokohama-dev";
+const DB_NAME = "activity";
 
 const screenName = process.argv[2];
 if (!screenName) {
